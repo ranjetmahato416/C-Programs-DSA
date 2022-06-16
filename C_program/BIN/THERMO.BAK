@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+
+int main()
+{
+    int gd=DETECT, gm, t;
+    initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+    line(100,200,500,200);
+    line(100,400,500,400);
+    line(550,250,600,250);
+    line(550,350,600,350);
+    ellipse(100,300,90,270,50,100);
+    ellipse(600,300,270,90,25,50);
+    ellipse(550,200,180,270,50,50); //use 180,270 in windows
+    ellipse(550,400,90,180,50,50); //use 90,180 in windows
+    rectangle(100,250,500,350);
+    printf("Enter temperature");
+    scanf("%d",&t);
+    bar(500-(400/140)*(t-94),250,500,350);
+    getch();
+    closegraph();
+    return 0;
+}
